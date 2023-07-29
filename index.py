@@ -342,7 +342,7 @@ def ver_promedio(id_estudiante):
         calificaciones_estudiante = cursor.fetchall()
 
         if not calificaciones_estudiante:
-            print("No hay calificaciones registradas para el estudiante.")
+            print("No hay calificaciones registradas en el sistema para el estudiante.")
             return
 
         # Calcular el promedio del estudiante
@@ -350,9 +350,11 @@ def ver_promedio(id_estudiante):
         suma_calificaciones = sum(calificacion.Calificacion for calificacion in calificaciones_estudiante)
         promedio_estudiante = suma_calificaciones / total_calificaciones
 
-        print(f"Promedio del estudiante: {promedio_estudiante:.2f}")
+        print(f"Promedio del estudiante es un total de: {promedio_estudiante:.2f}")
     except Exception as e:
-        print(f"Error al obtener el promedio del estudiante: {str(e)}")
+        print(f"Error al obtener el promedio del estudiante, no cursado: {str(e)}")
+        print("")
+        print("Salir del sistema")
     finally:
         conexion.close()
 
