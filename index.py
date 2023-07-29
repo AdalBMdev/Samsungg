@@ -247,23 +247,20 @@ def menu_profesor(id_profesor):
         print("\n--- Menú del Profesor ---")
         print("1. Agregar una calificación")
         print("2. Modificar una calificación")
-        print("3. Mostrar el promedio de notas de todos los estudiantes en una materia")
-        print("4. Mostrar el promedio global de una materia")
+        print("3. Mostrar el promedio de notas de todos los estudiantes cursando en una materia")
+        print("4. Mostrar el promedio global de todos los estudiantes de una materia")
         print("0. Salir")
         
         opcion = input("Ingrese el número de la opción que desea realizar: ")
+        limpiar_consola()
 
         if opcion == '1':
-            limpiar_consola()
             agregar_calificacion(id_profesor)
         elif opcion == '2':
-            limpiar_consola()
             modificar_calificacion(id_profesor)
         elif opcion == '3':
-            limpiar_consola()
             mostrar_promedio_materia()
         elif opcion == '4':
-            limpiar_consola()
             mostrar_promedio_global()
         elif opcion == '0':
             print("Saliendo del sistema.")
@@ -274,9 +271,9 @@ def menu_profesor(id_profesor):
 def menu_estudiante(id_estudiante):
     while True:
         print("\n--- Menú del Estudiante ---")
-        print("1. Ver calificaciones")
-        print("2. Ver promedio")
-        print("0. Salir")
+        print("1. Ver tus calificaciones")
+        print("2. Ver  tus promedios")
+        print("0. Salirse del programa")
         
         opcion = input("Ingrese el número de la opción que desea realizar: ")
 
